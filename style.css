@@ -1,0 +1,160 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark text color for better readability */
+}
+
+/* Container */
+.resume-container {
+    display: flex;
+    background-color: #f7f7f7; /* Lighter gray background */
+    width: 85%;
+    max-width: 1200px; /* Maximum width to ensure it doesn't stretch too much on large screens */
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.resume-container:hover {
+    transform: scale(1.02); /* Subtle zoom effect */
+}
+
+/* Left Section */
+.left-section {
+    background-color: #03cdff; /* Original Blue */
+    color: #f5f9ff;
+    padding: 20px;
+    width: 35%;
+    text-align: center;
+    border-radius: 12px 0 0 12px;
+    border-right: 4px solid #080808;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative; /* Set the position of the left section to relative */
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+    width: 120px; /* Reduced size of the image */
+    height: 120px;
+    border-radius: 50%; /* Circular border */
+    border: 5px solid #0c0c0c;
+    margin-bottom: 20px; /* Add space below the image */
+    transition: all 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: rotate(15deg); /* Rotate effect on hover */
+}
+
+/* Title and Section Header Styles */
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    color: #121313;
+    padding-top: 20px; /* Ensure there's space between the image and text */
+}
+
+h3 {
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px 0 10px;
+    color: #fff;
+    background-color: #212121; 
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition: all 0.3s ease;
+}
+
+h3:hover {
+    background-color: #fa0707;
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Section List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    font-size: 16px;
+    margin: 8px 0;
+    padding-left: 15px;
+    position: relative;
+}
+
+ul li::before {
+    content: "\2022";
+    color: #2528f5; /* Blue bullet point */
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+}
+
+/* Right Section */
+.right-section {
+    padding: 30px;
+    width: 65%;
+    border-radius: 0 12px 12px 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #2528f5;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Button Styling */
+button {
+    font-family: Arial, sans-serif;
+    background-color: #03cdff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust the profile picture size for smaller screens */
+    .profile-picture {
+        width: 90px;  /* Make the profile picture smaller on mobile */
+        height: 90px;
+        margin-bottom: 15px; /* Adjust space below image */
+    }
+
+    /* Adjust the layout for smaller screens */
+    .resume-container {
+        flex-direction: column; /* Stack the left and right sections */
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .left-section {
+        width: 100%;
+        border-radius: 12px 12px 0 0; /* Adjust for top-left circular border */
+        padding-top: 50px; /* Add top padding to make room for the image */
+    }
+
+    .right-section {
+        width: 100%;
+        margin-top: 20px; /* Add margin between sections */
+    }
+}
